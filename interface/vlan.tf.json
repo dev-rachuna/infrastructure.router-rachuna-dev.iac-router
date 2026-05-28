@@ -1,0 +1,62 @@
+{
+  "resource": {
+    "routeros_interface_vlan": {
+      "lan_01_vlan_vms_dmz": {
+        "name": "LAN-01-VLAN-VMS-DMZ",
+        "interface": "LAN-01",
+        "vlan_id": 20,
+        "loop_protect": "on",
+        "comment": "prod.pve03.rachuna.dev"
+      },
+      "lan_01_vlan_vms_internal": {
+        "name": "LAN-01-VLAN-VMS-INTERNAL",
+        "interface": "LAN-01",
+        "vlan_id": 10,
+        "loop_protect": "on",
+        "comment": "internal.pve03.rachuna.dev"
+      },
+      "lan_02_vlan_vms_dmz": {
+        "name": "LAN-02-VLAN-VMS-DMZ",
+        "interface": "LAN-02",
+        "vlan_id": 20,
+        "loop_protect": "on",
+        "comment": "prod.pve02.rachuna.dev"
+      },
+      "lan_02_vlan_vms_internal": {
+        "name": "LAN-02-VLAN-VMS-INTERNAL",
+        "interface": "LAN-02",
+        "vlan_id": 10,
+        "loop_protect": "on",
+        "comment": "internal.pve02.rachuna.dev"
+      },
+      "lan_03_vlan_vms_dmz": {
+        "name": "LAN-03-VLAN-VMS-DMZ",
+        "interface": "LAN-03",
+        "vlan_id": 20,
+        "loop_protect": "on",
+        "comment": "prod.pve01.rachuna.dev"
+      },
+      "lan_03_vlan_vms_internal": {
+        "name": "LAN-03-VLAN-VMS-INTERNAL",
+        "interface": "LAN-03",
+        "vlan_id": 10,
+        "loop_protect": "on",
+        "comment": "internal.pve01.rachuna.dev"
+      },
+      "lan_04_vlan_bridge_clients": {
+        "name": "LAN-04-VLAN-BRIDGE-CLIENTS",
+        "interface": "LAN-04",
+        "vlan_id": 20,
+        "loop_protect": "on",
+        "comment": "home.rachuna.dev"
+      },
+      "lan_07_vlan_vms_internal": {
+        "name": "LAN-07-VLAN-VMS-INTERNAL",
+        "interface": "LAN-07",
+        "vlan_id": 10,
+        "loop_protect": "on",
+        "comment": "internal.pve01.rachuna.dev"
+      }
+    }
+  }
+}
