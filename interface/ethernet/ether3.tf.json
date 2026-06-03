@@ -1,0 +1,16 @@
+{
+  "module": {
+    "ether3": {
+      "source": "git::https://gitlab.com/dev.rachuna/artifacts/opentofu/routeros-interfaces.git?ref=feat/eth",
+      "ethernet_interfaces": {
+        "lan_02": {
+          "factory_name": "ether3",
+          "name": "LAN-02",
+          "comment": "pve-s4.rachuna.dev",
+          "poe_out": "off",
+          "auto_negotiation": true
+        }
+      }
+    }
+  }
+}

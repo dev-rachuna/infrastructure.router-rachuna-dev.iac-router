@@ -3,9 +3,6 @@
     "system": {
       "source": "./system/"
     },
-    "ip": {
-      "source": "./ip/"
-    },
     "interface": {
       "source": "./interface/"
     }

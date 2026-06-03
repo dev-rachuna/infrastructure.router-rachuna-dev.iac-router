@@ -1,0 +1,21 @@
+{
+  "module": {
+    "bonding-storage": {
+      "source": "git::https://gitlab.com/dev.rachuna/artifacts/opentofu/routeros-interfaces.git?ref=feat/eth",
+      "bonding_interfaces": {
+        "bonding-storage": {
+          "name": "BONDING-STORAGE",
+          "slaves": [
+            "LAN-08",
+            "LAN-09"
+          ],
+          "mode": "802.3ad",
+          "vlan_id": 10,
+          "loop_protect": "on",
+          "comment": "storage.rachuna.dev",
+          "mtu": 1592
+        }
+      }
+    }
+  }
+}

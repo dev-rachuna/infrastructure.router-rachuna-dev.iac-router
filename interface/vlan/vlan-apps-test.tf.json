@@ -1,0 +1,53 @@
+{
+  "module": {
+    "vlan-apps-test": {
+      "source": "git::https://gitlab.com/dev.rachuna/artifacts/opentofu/routeros-interfaces.git?ref=feat/eth",
+      "vlan_interfaces": {
+        "vlan-apps-test": {
+          "name": "VLAN-APPS-TEST",
+          "interface": "BRIDGE-PROXMOX",
+          "vlan_id": 10,
+          "loop_protect": "on",
+          "comment": "Proxmox Test 10.3.1.0/24",
+          "ip_addresses": {
+            "vlan-apps-test": {
+              "address": "10.3.1.1/24",
+              "comment": "Proxmox test network gateway"
+            }
+          },
+          "dhcp_server": {
+            "vlan-apps-test": {
+              "name": "DHCP-VLAN-APPS-TEST",
+              "comment": "DHCP server for test network",
+              "lease_time": "1d",
+              "address_pool": "VLAN-APPS-TEST-DHCP-POOLS",
+              "delay_threshold": "0s",
+              "dynamic_lease_identifiers": "client-mac",
+              "dhcp_pools": {
+                "vlan-apps-test_dhcp_pool": {
+                  "name": "VLAN-APPS-TEST-DHCP-POOLS",
+                  "ranges": [
+                    "10.3.1.2-10.3.1.254"
+                  ],
+                  "comment": "DHCP pool for test network"
+                }
+              },
+              "dhcp_networks": {
+                "vlan-apps-test_dhcp_network": {
+                  "address": "10.3.1.0/24",
+                  "gateway": "10.3.1.1",
+                  "netmask": 24,
+                  "dns_server": [
+                    "10.2.0.1"
+                  ],
+                  "domain": "rachuna.dev",
+                  "comment": "DHCP network for test network"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

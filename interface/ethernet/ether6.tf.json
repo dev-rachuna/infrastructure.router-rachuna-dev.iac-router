@@ -1,0 +1,16 @@
+{
+  "module": {
+    "ether6": {
+      "source": "git::https://gitlab.com/dev.rachuna/artifacts/opentofu/routeros-interfaces.git?ref=feat/eth",
+      "ethernet_interfaces" : {
+        "lan_05": {
+          "factory_name": "ether6",
+          "name": "LAN-05",
+          "comment": "printer.rachuna.dev",
+          "poe_out": "off",
+          "auto_negotiation": true
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "module": {
+    "ethernet": {
+      "source": "./ethernet/"
+    },
+    "vlan": {
+      "source": "./vlan/"
+    },
+    "bonding": {
+      "source": "./bonding/"
+    },
+    "bridge": {
+      "source": "./bridge/"
+    }
+  }
+}

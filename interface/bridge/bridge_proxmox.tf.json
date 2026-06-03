@@ -1,0 +1,108 @@
+{
+  "module": {
+    "bridge_proxmox": {
+      "source": "git::https://gitlab.com/dev.rachuna/artifacts/opentofu/routeros-interfaces.git?ref=feat/eth",
+      "bridges" : {
+        "bridge_proxmox": {
+          "name": "BRIDGE-PROXMOX",
+          "comment": "Proxmox network bridge",
+          "interface": "BRIDGE-PROXMOX",
+          "dhcp_snooping": true,
+          "igmp_snooping": true,
+          "vlan-filtering": true,
+          "protocol_mode": "rstp",
+          "ip_addresses": {
+            "bridge_proxmox": {
+              "address": "10.3.0.1/24",
+              "comment": "Proxmox network gateway"
+            }
+          },
+          "bridge_ports": {
+            "pve01_rachuna_dev": {
+              "interface": "LAN-01",
+              "comment": "pve01.rachuna.dev",
+              "trusted": true
+            },
+            "pve02_rachuna_dev": {
+              "interface": "LAN-02",
+              "comment": "pve02.rachuna.dev",
+              "trusted": true
+            },
+            "pve03_rachuna_dev": {
+              "interface": "LAN-03",
+              "comment": "pve03.rachuna.dev",
+              "trusted": true
+            }
+          },
+          "bridge_vlans": {
+            "lan_proxmox": {
+              "vlan_ids": ["1"],
+              "comment": "Proxmox Network LAN",
+              "untagged": ["LAN-01", "LAN-02", "LAN-03"],
+              "tagged": ["BRIDGE-PROXMOX"]
+            },
+            "vlan_apps_test": {
+              "vlan_ids": ["10"],
+              "comment": "Proxmox Test VLAN",
+              "tagged": ["BRIDGE-PROXMOX","LAN-01", "LAN-02", "LAN-03"]
+            },
+            "vlan_apps_prod": {
+              "vlan_ids": ["20"],
+              "comment": "Proxmox Production VLAN",
+              "tagged": ["BRIDGE-PROXMOX","LAN-01", "LAN-02", "LAN-03"]
+            }
+          },
+          "dhcp_server": {
+            "proxmox_dhcp_server": {
+              "name": "DHCP-PROXMOX",
+              "comment": "DHCP server for Proxmox network",
+              "lease_time": "1d",
+              "address_pool": "PROXMOX-DHCP-POOLS",
+              "delay_threshold": "0s",
+              "dynamic_lease_identifiers": "client-mac,client-id",
+              "dhcp_pools": {
+                "proxmox_dhcp_pool": {
+                  "name": "PROXMOX-DHCP-POOLS",
+                  "ranges": ["10.3.0.11-10.3.0.14"],
+                  "comment": "DHCP pool for Proxmox network"
+                }
+              },
+              "dhcp_networks": {
+                "proxmox_dhcp_network": {
+                  "address": "10.3.0.0/24",
+                  "gateway": "10.3.0.1",
+                  "netmask": 24,
+                  "dns_server": ["10.3.0.1"],
+                  "domain": "rachuna.dev",
+                  "comment": "DHCP network for Proxmox network"
+                }
+              },
+              "dhcp_leases": {
+                "pve_s1_rachuna_dev": {
+                  "address": "10.3.0.11",
+                  "mac_address": "38:05:25:33:B8:49",
+                  "comment": "pve-s1.rachuna.dev"
+                },
+                "pve_s2_rachuna_dev": {
+                  "address": "10.3.0.12",
+                  "mac_address": "D8:5E:D3:6B:3F:0C",
+                  "comment": "pve-s2.rachuna.dev"
+                },
+                "pve_s3_rachuna_dev": {
+                  "address": "10.3.0.13",
+                  "mac_address": "18:C0:4D:8C:4F:5E",
+                  "comment": "pve-s3.rachuna.dev"
+                },
+                "pve_s4_rachuna_dev": {
+                  "address": "10.3.0.14",
+                  "mac_address": "38:05:25:34:6F:3C",
+                  "comment": "pve-s4.rachuna.dev"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

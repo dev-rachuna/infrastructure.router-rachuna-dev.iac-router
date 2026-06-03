@@ -1,0 +1,15 @@
+{
+  "module": {
+    "sfp_sfpplus1": {
+      "source": "git::https://gitlab.com/dev.rachuna/artifacts/opentofu/routeros-interfaces.git?ref=feat/eth",
+      "ethernet_interfaces" : {
+        "sfp_sfpplus1": {
+          "factory_name": "sfp-sfpplus1",
+          "name": "sfp-sfpplus1",
+          "disabled": true,
+          "auto_negotiation": true
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "module": {
+    "bridge_mikrotik": {
+      "source": "git::https://gitlab.com/dev.rachuna/artifacts/opentofu/routeros-interfaces.git?ref=feat/eth",
+      "bridges" : {
+        "bridge_mikrotik": {
+          "name": "BRIDGE-MIKROTIK",
+          "comment": "mikrotik network bridge",
+          "interface": "BRIDGE-MIKROTIK",
+          "dhcp_snooping": true,
+          "igmp_snooping": true,
+          "vlan-filtering": false,
+          "protocol_mode": "rstp",
+          "bridge_ports": {
+            "home_rachuna_dev": {
+              "interface": "LAN-04",
+              "comment": "home.rachuna.dev",
+              "trusted": true
+            }
+          },
+          "ip_addresses": {
+            "bridge_mikrotik": {
+              "address": "10.0.0.1/24",
+              "comment": "Mikrotik network gateway"
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "module": {
+    "ether8": {
+      "source": "git::https://gitlab.com/dev.rachuna/artifacts/opentofu/routeros-interfaces.git?ref=feat/eth",
+      "ethernet_interfaces" : {
+        "lan_07": {
+          "factory_name": "ether8",
+          "name": "LAN-07",
+          "comment": "nbo-001-mr.rachuna.dev",
+          "poe_out": "off",
+          "auto_negotiation": true
+        }
+      }
+    }
+  }
+}

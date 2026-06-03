@@ -1,0 +1,81 @@
+{
+  "module": {
+    "vlan_interfaces": {
+      "source": "git::https://gitlab.com/dev.rachuna/artifacts/opentofu/routeros-interfaces.git?ref=feat/eth",
+      "vlan_interfaces" : {
+        "vlan-apps-prod": {
+          "name": "VLAN-APPS-PROD",
+          "interface": "BRIDGE-PROXMOX",
+          "vlan_id": 20,
+          "loop_protect": "on",
+          "comment": "Proxmox Prod 10.3.2.0/24",
+          "ip_addresses": {
+            "vlan-apps-prod": {
+              "address": "10.3.2.1/24",
+              "comment": "Proxmox prod network gateway"
+            }
+          },
+          "dhcp_server": {
+            "vlan-apps-prod": {
+              "name": "DHCP-VLAN-APPS-PROD",
+              "comment": "DHCP server for prod network",
+              "lease_time": "1d",
+              "address_pool": "VLAN-APPS-PROD-DHCP-POOLS",
+              "delay_threshold": "0s",
+              "dynamic_lease_identifiers": "client-mac",
+              "dhcp_pools": {
+                "vlan-apps-prod_dhcp_pool": {
+                  "name": "VLAN-APPS-PROD-DHCP-POOLS",
+                  "ranges": ["10.3.2.2-10.3.2.254"],
+                  "comment": "DHCP pool for prod network"
+                }
+              },
+              "dhcp_networks": {
+                "vlan-apps-prod_dhcp_network": {
+                  "address": "10.3.2.0/24",
+                  "gateway": "10.3.2.1",
+                  "netmask": 24,
+                  "dns_server": ["10.2.0.1"],
+                  "domain": "rachuna.dev",
+                  "comment": "DHCP network for prod network"
+                }
+              },
+              "dhcp_leases": {
+                "gitlab-runner-1002_rachuna_dev": {
+                  "address": "10.3.2.2",
+                  "mac_address": "BC:24:11:0F:BD:61",
+                  "comment": "gitlab-runner-1002.rachuna.dev"
+                },
+                "gitlab-runner-1003_rachuna_dev": {
+                  "address": "10.3.2.3",
+                  "mac_address": "BC:24:11:0F:BD:60",
+                  "comment": "gitlab-runner-1003.rachuna.dev"
+                },
+                "gitlab-runner-1004_rachuna_dev": {
+                  "address": "10.3.2.4",
+                  "mac_address": "BC:24:11:0F:BD:62",
+                  "comment": "gitlab-runner-1004.rachuna.dev"
+                },
+                "vault-1005_rachuna_dev": {
+                  "address": "10.3.2.5",
+                  "mac_address": "BC:24:11:B6:06:01",
+                  "comment": "vault-1005.rachuna.dev"
+                },
+                "vault-1006_rachuna_dev": {
+                  "address": "10.3.2.6",
+                  "mac_address": "BC:24:11:B6:06:02",
+                  "comment": "vault-1006.rachuna.dev"
+                },
+                "vault-1007_rachuna_dev": {
+                  "address": "10.3.2.7",
+                  "mac_address": "BC:24:11:B6:06:03",
+                  "comment": "vault-1007.rachuna.dev"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

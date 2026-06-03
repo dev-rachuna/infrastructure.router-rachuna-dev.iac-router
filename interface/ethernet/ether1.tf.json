@@ -1,0 +1,23 @@
+{
+  "module": {
+    "ether1": {
+      "source": "git::https://gitlab.com/dev.rachuna/artifacts/opentofu/routeros-interfaces.git?ref=feat/eth",
+      "ethernet_interfaces": {
+        "wan": {
+          "factory_name": "ether1",
+          "name": "WAN",
+          "comment": "WAN - ISP",
+          "poe_out": "off",
+          "auto_negotiation": true,
+          "dhcp_client":{
+            "name": "wan_dhcp_client",
+            "interface": "WAN",
+            "add_default_route": "yes",
+            "use_peer_dns": true,
+            "use_peer_ntp": true
+          }
+        }
+      }
+    }
+  }
+}

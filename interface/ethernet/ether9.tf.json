@@ -1,0 +1,17 @@
+{
+  "module": {
+    "ether9": {
+      "source": "git::https://gitlab.com/dev.rachuna/artifacts/opentofu/routeros-interfaces.git?ref=feat/eth",
+      "ethernet_interfaces": {
+        "lan_08": {
+          "factory_name": "ether9",
+          "name": "LAN-08",
+          "comment": "storage.rachuna.dev",
+          "mtu": 1592,
+          "poe_out": "off",
+          "auto_negotiation": true
+        }
+      }
+    }
+  }
+}

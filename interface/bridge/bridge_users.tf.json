@@ -1,0 +1,38 @@
+{
+  "module": {
+    "bridge_users": {
+      "source": "git::https://gitlab.com/dev.rachuna/artifacts/opentofu/routeros-interfaces.git?ref=feat/eth",
+      "bridges" : {
+        "bridge_users": {
+          "name": "BRIDGE-USERS",
+          "comment": "Users network bridge",
+          "interface": "BRIDGE-USERS",
+          "dhcp_snooping": true,
+          "igmp_snooping": true,
+          "vlan-filtering": true,
+          "protocol_mode": "rstp",
+          "ip_addresses": {
+            "bridge_users": {
+              "address": "10.1.0.1/24",
+              "comment": "Users network gateway"
+            }
+          },
+          "bridge_ports": {
+            "nbo-001-mr_rachuna_dev": {
+              "interface": "LAN-07",
+              "comment": "nbo-001-mr.rachuna.dev",
+              "trusted": true,
+              "pvid": 20,
+              "frame_types": "admit-only-untagged-and-priority-tagged"
+            },
+            "nbo-002-mr_rachuna_dev": {
+              "interface": "LAN-06",
+              "comment": "nbo-002-mr.rachuna.dev",
+              "trusted": true
+            }
+          }
+        }
+      }
+    }
+  }
+}

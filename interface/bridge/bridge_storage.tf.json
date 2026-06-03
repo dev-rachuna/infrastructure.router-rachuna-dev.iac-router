@@ -1,0 +1,65 @@
+{
+  "module": {
+    "bridge_storage": {
+      "source": "git::https://gitlab.com/dev.rachuna/artifacts/opentofu/routeros-interfaces.git?ref=feat/eth",
+      "bridges" : {
+        "bridge_storage": {
+          "name": "BRIDGE-STORAGE",
+          "comment": "storage network bridge",
+          "interface": "BRIDGE-STORAGE",
+          "dhcp_snooping": true,
+          "igmp_snooping": true,
+          "vlan-filtering": false,
+          "protocol_mode": "rstp",
+          "bridge_ports": {
+            "storage_rachuna_dev": {
+              "interface": "BONDING-STORAGE",
+              "comment": "storage.rachuna.dev",
+              "trusted": true
+            }
+          },
+          "ip_addresses": {
+            "bridge_storage": {
+              "address": "10.2.0.1/24",
+              "comment": "storage network gateway"
+            }
+          },
+          "dhcp_server": {
+            "storage_dhcp_server": {
+              "name": "DHCP-STORAGE",
+              "comment": "DHCP server for storage network",
+              "lease_time": "1d",
+              "address_pool": "STORAGE-DHCP-POOLS",
+              "delay_threshold": "0s",
+              "dynamic_lease_identifiers": "client-mac",
+              "dhcp_pools": {
+                "storage_dhcp_pool": {
+                  "name": "STORAGE-DHCP-POOLS",
+                  "ranges": ["10.2.0.11-10.2.0.11"],
+                  "comment": "DHCP pool for storage network"
+                }
+              },
+              "dhcp_networks": {
+                "storage_dhcp_network": {
+                  "address": "10.2.0.0/24",
+                  "gateway": "10.2.0.1",
+                  "netmask": 24,
+                  "dns_server": ["10.2.0.1"],
+                  "domain": "rachuna.dev",
+                  "comment": "DHCP network for storage network"
+                }
+              },
+              "dhcp_leases": {
+                "storage_rachuna_dev": {
+                  "address": "10.2.0.11",
+                  "mac_address": "00:11:32:FE:1F:E3",
+                  "comment": "storage.rachuna.dev"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
