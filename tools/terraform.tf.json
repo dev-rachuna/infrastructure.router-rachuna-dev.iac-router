@@ -1,0 +1,15 @@
+{
+  "terraform": {
+    "required_version": "1.10.5",
+    "required_providers": {
+      "vault": {
+        "source": "hashicorp/vault",
+        "version": "5.9"
+      },
+      "routeros": {
+        "source": "terraform-routeros/routeros",
+        "version": "1.99.1"
+      }
+    }
+  }
+}

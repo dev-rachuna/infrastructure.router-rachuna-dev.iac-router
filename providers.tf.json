@@ -20,7 +20,19 @@
       "skip_tls_verify": true
     },
     "routeros": {
-      "suppress_syso_del_warn": true
+      "suppress_syso_del_warn": true,
+      "hosturl": "${data.vault_kv_secret_v2.routeros_auth.data.hosturl}",
+      "username": "${data.vault_kv_secret_v2.routeros_auth.data.username}",
+      "password": "${data.vault_kv_secret_v2.routeros_auth.data.password}",
+      "insecure": true
+    }
+  },
+  "data": {
+    "vault_kv_secret_v2": {
+      "routeros_auth": {
+        "mount": "dev.rachuna",
+        "name": "auth/router.rachuna.dev"
+      }
     }
   }
 }
