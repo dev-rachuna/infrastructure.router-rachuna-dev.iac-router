@@ -1,6 +1,6 @@
-# <img src="docs/opentofu.png" alt="opentofu" height="30"/> Vault Infrastructure as Code
+# <img src=".gitlab/opentofu.png" alt="opentofu" height="30"/> iac-vault
 
----
+::include{file=.gitlab/badges.md}
 
 ## Infrastructure as Code dla HashiCorp Vault — zarządzane przez OpenTofu.
 
@@ -77,17 +77,4 @@ tofu apply
 
 ---
 
-## Contributions
-Jeśli masz pomysły na ulepszenia, zgłoś problemy, rozwidl repozytorium lub utwórz Merge Request. Wszystkie wkłady są mile widziane!
-[Contributions](CONTRIBUTING.md)
-
----
-
-## License
-[Licencja](LICENCE) oparta na zasadach Creative Commons BY-NC-SA 4.0, dostosowana do potrzeb projektu.
-
----
-
-# Author Information
-### Maciej Rachuna
-# <img src="docs/logo.png" alt="rachuna-net.pl" height="100"/>
+::include{file=.gitlab/footer.md}
