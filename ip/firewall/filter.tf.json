@@ -1,0 +1,21 @@
+{
+  "resource": {
+    "routeros_ip_firewall_filter": {
+      "forward_accept_to_wan": {
+        "chain": "forward",
+        "action": "accept",
+        "out_interface": "WAN"
+      },
+      "input_accept_established_related_new": {
+        "chain": "input",
+        "action": "accept",
+        "connection_state": "established,related,new"
+      },
+      "input_accept_icmp": {
+        "chain": "input",
+        "action": "accept",
+        "protocol": "icmp"
+      }
+    }
+  }
+}

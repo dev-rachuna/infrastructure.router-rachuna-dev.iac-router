@@ -1,0 +1,25 @@
+{
+  "data": {
+    "vault_kv_secret_v2": {
+      "mrachuna_ssh": {
+        "mount": "users",
+        "name": "mrachuna/ssh"
+      }
+    }
+  },
+  "resource": {
+    "routeros_system_user": {
+      "mrachuna": {
+        "name": "mrachuna",
+        "group": "full",
+        "password": "secret"
+      }
+    },
+    "routeros_system_user_sshkeys": {
+      "mrachuna": {
+        "user": "${routeros_system_user.mrachuna.name}",
+        "key": "${data.vault_kv_secret_v2.mrachuna_ssh.data.PUBLIC_KEY}"
+      }
+    }
+  }
+}

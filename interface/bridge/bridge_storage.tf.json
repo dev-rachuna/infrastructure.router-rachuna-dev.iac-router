@@ -35,7 +35,7 @@
               "dhcp_pools": {
                 "storage_dhcp_pool": {
                   "name": "STORAGE-DHCP-POOLS",
-                  "ranges": ["10.2.0.11-10.2.0.11"],
+                  "ranges": ["10.2.0.11"],
                   "comment": "DHCP pool for storage network"
                 }
               },
@@ -45,6 +45,7 @@
                   "gateway": "10.2.0.1",
                   "netmask": 24,
                   "dns_server": ["10.2.0.1"],
+                  "ntp_server": ["10.2.0.1"],
                   "domain": "rachuna.dev",
                   "comment": "DHCP network for storage network"
                 }

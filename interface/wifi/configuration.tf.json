@@ -1,0 +1,19 @@
+{
+  "resource": {
+    "routeros_wifi_configuration": {
+      "cfg_herbapolki": {
+        "name": "CFG-HERBAPOLKI",
+        "country": "Poland",
+        "datapath": {
+          "bridge": "BRIDGE-USERS"
+        },
+        "disabled": false,
+        "security": {
+          "authentication_types": "wpa2-psk",
+          "passphrase": "${data.vault_kv_secret_v2.wifi_security.data.SEC_HERBAPOLKI_PASSWORD}"
+        },
+        "ssid": "Herbapolki"
+      }
+    }
+  }
+}

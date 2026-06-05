@@ -1,0 +1,13 @@
+{
+  "resource": {
+    "routeros_wifi_cap": {
+      "cap": {
+        "certificate": "*5",
+        "discovery_interfaces": [
+          "*5B"
+        ],
+        "enabled": true
+      }
+    }
+  }
+}

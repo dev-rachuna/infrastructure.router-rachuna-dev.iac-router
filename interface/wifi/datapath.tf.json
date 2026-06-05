@@ -1,0 +1,16 @@
+{
+  "resource": {
+    "routeros_wifi_datapath": {
+      "dp_users": {
+        "name": "DP-USERS",
+        "bridge": "BRIDGE-USERS",
+        "vlan_id": 30,
+        "disabled": true
+      },
+      "dp_users_bridge": {
+        "name": "DP-USERS-BRIDGE",
+        "bridge": "BRIDGE-USERS"
+      }
+    }
+  }
+}

@@ -1,4 +1,9 @@
 {
+  "module": {
+    "firewall": {
+      "source": "./firewall/"
+    }
+  },
   "terraform": {
     "required_version": "1.10.5",
     "required_providers": {
@@ -10,17 +15,6 @@
         "source": "terraform-routeros/routeros",
         "version": "1.99.1"
       }
-    },
-    "backend": {
-      "http": {}
-    }
-  },
-  "provider": {
-    "vault": {
-      "skip_tls_verify": true
-    },
-    "routeros": {
-      "suppress_syso_del_warn": true
     }
   }
 }

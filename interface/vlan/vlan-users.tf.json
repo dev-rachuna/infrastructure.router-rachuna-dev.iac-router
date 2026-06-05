@@ -1,0 +1,16 @@
+{
+  "module": {
+    "vlan-users": {
+      "source": "git::https://gitlab.com/dev.rachuna/artifacts/opentofu/routeros-interfaces.git?ref=feat/eth",
+      "vlan_interfaces": {
+        "vlan-users": {
+          "name": "LAN-04-30",
+          "interface": "LAN-04",
+          "vlan_id": 30,
+          "loop_protect": "on",
+          "comment": "LAN-04 VLAN Users"
+        }
+      }
+    }
+  }
+}

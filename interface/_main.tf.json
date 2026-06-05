@@ -11,6 +11,9 @@
     },
     "bridge": {
       "source": "./bridge/"
+    },
+    "wifi": {
+      "source": "./wifi/"
     }
   }
 }

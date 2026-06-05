@@ -5,6 +5,12 @@
     },
     "interface": {
       "source": "./interface/"
+    },
+    "ip": {
+      "source": "./ip/"
+    },
+    "users": {
+      "source": "./users/"
     }
   }
 }

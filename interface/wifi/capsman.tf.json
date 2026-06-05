@@ -1,0 +1,17 @@
+{
+  "resource": {
+    "routeros_wifi_capsman": {
+      "capsman": {
+        "ca_certificate": "auto",
+        "certificate": "auto",
+        "enabled": true,
+        "interfaces": [
+          "BRIDGE-MIKROTIK"
+        ],
+        "package_path": "",
+        "require_peer_certificate": false,
+        "upgrade_policy": "none"
+      }
+    }
+  }
+}

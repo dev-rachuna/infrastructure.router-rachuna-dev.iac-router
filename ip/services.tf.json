@@ -1,0 +1,52 @@
+{
+  "resource": {
+    "routeros_ip_service": {
+      "ftp": {
+        "numbers": "ftp",
+        "port": 21,
+        "disabled": true
+      },
+      "ssh": {
+        "numbers": "ssh",
+        "port": 22,
+        "address": "10.0.0.0/8"
+      },
+      "telnet": {
+        "numbers": "telnet",
+        "port": 23,
+        "disabled": true
+      },
+      "www": {
+        "numbers": "www",
+        "port": 80,
+        "address": "10.0.0.0/8"
+      },
+      "www_ssl": {
+        "numbers": "www-ssl",
+        "port": 443,
+        "address": "10.0.0.0/8",
+        "certificate": "router.rachuna.dev",
+        "disabled": false,
+        "max_sessions": 5
+      },
+      "winbox": {
+        "numbers": "winbox",
+        "port": 8291,
+        "address": "10.0.0.0/8",
+        "disabled": true
+      },
+      "api": {
+        "numbers": "api",
+        "port": 8728,
+        "address": "10.0.0.0/8",
+        "disabled": true
+      },
+      "api_ssl": {
+        "numbers": "api-ssl",
+        "port": 8729,
+        "address": "10.0.0.0/8",
+        "certificate": "router.rachuna.dev"
+      }
+    }
+  }
+}

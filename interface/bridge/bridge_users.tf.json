@@ -22,13 +22,58 @@
               "interface": "LAN-07",
               "comment": "nbo-001-mr.rachuna.dev",
               "trusted": true,
-              "pvid": 20,
-              "frame_types": "admit-only-untagged-and-priority-tagged"
+              "pvid": 30,
+              "frame_types": "admit-only-untagged-and-priority-tagged",
+              "multicast_router": "disabled"
             },
             "nbo-002-mr_rachuna_dev": {
               "interface": "LAN-06",
               "comment": "nbo-002-mr.rachuna.dev",
-              "trusted": true
+              "trusted": true,
+              "pvid": 30,
+              "frame_types": "admit-only-untagged-and-priority-tagged",
+              "multicast_router": "disabled"
+            },
+            "lan-04-30": {
+              "interface": "LAN-04-30",
+              "comment": "lan-04-30 Users VLAN"
+            }
+          },
+          "bridge_vlans": {
+            "bridge_users": {
+              "vlan_ids": ["30"],
+              "comment": "Users VLAN",
+              "untagged": ["LAN-07", "LAN-06"],
+              "tagged": ["BRIDGE-USERS", "LAN-04", "LAN-05"]
+            }
+          },
+          "dhcp_server": {
+            "users_dhcp_server": {
+              "name": "DHCP-USERS",
+              "comment": "DHCP server for users network",
+              "lease_time": "12h",
+              "address_pool": "USERS-DHCP-POOLS",
+              "delay_threshold": "0s",
+              "dynamic_lease_identifiers": "client-mac",
+              "dhcp_pools": {
+                "users_dhcp_pool": {
+                  "name": "USERS-DHCP-POOLS",
+                  "ranges": ["10.1.0.2-10.1.0.254"],
+                  "comment": "DHCP pool for users network"
+                }
+              },
+              "dhcp_networks": {
+                "users_dhcp_network": {
+                  "address": "10.1.0.0/24",
+                  "gateway": "10.1.0.1",
+                  "netmask": 24,
+                  "dns_server": ["10.1.0.1"],
+                  "ntp_server": ["10.1.0.1"],
+                  "domain": "rachuna.dev",
+                  "comment": "DHCP network for users network"
+                }
+              },
+              "dhcp_leases": {}
             }
           }
         }

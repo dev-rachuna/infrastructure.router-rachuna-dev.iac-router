@@ -1,0 +1,34 @@
+{
+  "module": {
+    "router_rachuna_dev_certificate": {
+      "source": "git::https://gitlab.com/dev.rachuna/artifacts/opentofu/routeros-certificates.git?ref=1.0.0",
+      "certificates": {
+        "router.rachuna.dev": {
+          "certificate_ref": "dev.rachuna/infrastructure/vault-rachuna-dev/iac-vault/router.rachuna.dev:certificate",
+          "private_key_ref": "dev.rachuna/infrastructure/vault-rachuna-dev/iac-vault/router.rachuna.dev:private_key",
+          "name": "router.rachuna.dev",
+          "common_name": "router.rachuna.dev",
+          "trusted": true
+        },
+        "PKI-ROOT": {
+          "certificate_ref": "dev.rachuna/infrastructure/vault-rachuna-dev/iac-vault/pki:pki-root",
+          "name": "PKI-ROOT",
+          "common_name": "PKI-ROOT",
+          "trusted": true
+        },
+        "PKI-INT-PROD": {
+          "certificate_ref": "dev.rachuna/infrastructure/vault-rachuna-dev/iac-vault/pki:pki-int-prod",
+          "name": "PKI-INT-PROD",
+          "common_name": "PKI-INT-PROD",
+          "trusted": true
+        },
+        "PKI-INT-TEST": {
+          "certificate_ref": "dev.rachuna/infrastructure/vault-rachuna-dev/iac-vault/pki:pki-int-test",
+          "name": "PKI-INT-TEST",
+          "common_name": "PKI-INT-TEST",
+          "trusted": true
+        }
+      }
+    }
+  }
+}

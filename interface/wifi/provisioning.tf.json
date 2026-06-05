@@ -1,0 +1,20 @@
+{
+  "resource": {
+    "routeros_wifi_provisioning": {
+      "herbapolki_2ghz_ax": {
+        "action": "create-enabled",
+        "master_configuration": "CFG-HERBAPOLKI",
+        "supported_bands": [
+          "2ghz-ax"
+        ]
+      },
+      "herbapolki_5ghz_ax": {
+        "action": "create-enabled",
+        "master_configuration": "CFG-HERBAPOLKI",
+        "supported_bands": [
+          "5ghz-ax"
+        ]
+      }
+    }
+  }
+}

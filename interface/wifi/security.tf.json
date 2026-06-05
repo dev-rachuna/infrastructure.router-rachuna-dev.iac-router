@@ -1,0 +1,21 @@
+{
+  "data": {
+    "vault_kv_secret_v2": {
+      "wifi_security": {
+        "mount": "dev.rachuna",
+        "name": "infrastructure/router-rachuna-dev/iac-router"
+      }
+    }
+  },
+  "resource": {
+    "routeros_wifi_security": {
+      "sec_herbapolki": {
+        "name": "SEC-HERBAPOLKI",
+        "authentication_types": [
+          "wpa2-psk"
+        ],
+        "passphrase": "${data.vault_kv_secret_v2.wifi_security.data.SEC_HERBAPOLKI_PASSWORD}"
+      }
+    }
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "resource": {
+    "routeros_system_ntp_client": {
+      "ntp_client": {
+        "enabled": true,
+        "servers": [
+          "time.google.com",
+          "pool.ntp.org"
+        ]
+      }
+    },
+    "routeros_system_ntp_server": {
+      "ntp_server": {
+        "enabled": true,
+        "use_local_clock": true
+      }
+    }
+  }
+}
