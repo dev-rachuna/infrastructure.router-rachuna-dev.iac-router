@@ -1,7 +1,7 @@
 {
   "module": {
     "bridge_proxmox": {
-      "source": "git::https://gitlab.com/dev.rachuna/artifacts/opentofu/routeros-interfaces.git?ref=feat/eth",
+      "source": "git::https://gitlab.com/dev.rachuna/artifacts/opentofu/routeros-interfaces.git?ref=1.0.0",
       "bridges" : {
         "bridge_proxmox": {
           "name": "BRIDGE-PROXMOX",

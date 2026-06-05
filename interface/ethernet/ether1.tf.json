@@ -1,7 +1,7 @@
 {
   "module": {
     "ether1": {
-      "source": "git::https://gitlab.com/dev.rachuna/artifacts/opentofu/routeros-interfaces.git?ref=feat/eth",
+      "source": "git::https://gitlab.com/dev.rachuna/artifacts/opentofu/routeros-interfaces.git?ref=1.0.0",
       "ethernet_interfaces": {
         "wan": {
           "factory_name": "ether1",

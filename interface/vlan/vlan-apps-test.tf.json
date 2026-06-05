@@ -1,7 +1,7 @@
 {
   "module": {
     "vlan-apps-test": {
-      "source": "git::https://gitlab.com/dev.rachuna/artifacts/opentofu/routeros-interfaces.git?ref=feat/eth",
+      "source": "git::https://gitlab.com/dev.rachuna/artifacts/opentofu/routeros-interfaces.git?ref=1.0.0",
       "vlan_interfaces": {
         "vlan-apps-test": {
           "name": "VLAN-APPS-TEST",

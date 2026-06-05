@@ -1,7 +1,7 @@
 {
   "module": {
     "bridge_users": {
-      "source": "git::https://gitlab.com/dev.rachuna/artifacts/opentofu/routeros-interfaces.git?ref=feat/eth",
+      "source": "git::https://gitlab.com/dev.rachuna/artifacts/opentofu/routeros-interfaces.git?ref=1.0.0",
       "bridges" : {
         "bridge_users": {
           "name": "BRIDGE-USERS",
