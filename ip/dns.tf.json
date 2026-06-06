@@ -18,17 +18,17 @@
                 "ttl": "1w",
                 "type": "A"
             },
-            "printer_rachuna_dev": {
-                "name": "printer.rachuna.dev",
-                "address": "10.1.0.13",
-                "comment": "printer.rachuna.dev",
-                "type": "A"
-            },
             "home_rachuna_dev": {
                 "name": "home.rachuna.dev",
                 "address": "10.0.0.2",
                 "comment": "LAN-04 home.rachuna.dev",
                 "ttl": "1w",
+                "type": "A"
+            },
+            "printer_rachuna_dev": {
+                "name": "printer.rachuna.dev",
+                "address": "10.1.0.13",
+                "comment": "printer.rachuna.dev",
                 "type": "A"
             },
             "storage_rachuna_dev": {
@@ -38,28 +38,32 @@
                 "ttl": "1w",
                 "type": "A"
             },
-            "pve_s1_rachuna_net_pl": {
-                "name": "pve-s1.rachuna-net.pl",
+            "pve_s1_rachuna_dev": {
+                "name": "pve-s1.rachuna.dev",
                 "address": "10.3.0.11",
-                "comment": "pve-s1.rachuna-net.pl",
+                "comment": "pve-s1.rachuna.dev",
+                "ttl": "1w",
                 "type": "A"
             },
             "pve_s2_rachuna_dev": {
                 "name": "pve-s2.rachuna.dev",
                 "address": "10.3.0.12",
+                "comment": "pve-s2.rachuna.dev",
                 "ttl": "1w",
                 "type": "A"
             },
-            "pve_s3_rachuna_net_pl": {
-                "name": "pve-s3.rachuna-net.pl",
+            "pve_s3_rachuna_dev": {
+                "name": "pve-s3.rachuna.dev",
                 "address": "10.3.0.13",
-                "comment": "pve-s3.rachuna-net.pl",
+                "comment": "pve-s3.rachuna.dev",
+                "ttl": "1w",
                 "type": "A"
             },
-            "pve_s4_rachuna_net_pl": {
-                "name": "pve-s4.rachuna-net.pl",
+            "pve_s4_rachuna_dev": {
+                "name": "pve-s4.rachuna.dev",
                 "address": "10.3.0.14",
-                "comment": "pve-s4.rachuna-net.pl",
+                "comment": "pve-s4.rachuna.dev",
+                "ttl": "1w",
                 "type": "A"
             },
             "vault_1005_rachuna_dev": {
@@ -107,27 +111,6 @@
                 "name": "vault.rachuna.dev",
                 "address": "10.3.2.254",
                 "comment": "vault VIP",
-                "ttl": "1w",
-                "type": "A"
-            },
-            "pve_s1_rachuna_dev": {
-                "name": "pve-s1.rachuna.dev",
-                "address": "10.3.0.11",
-                "comment": "pve-s1.rachuna.dev",
-                "ttl": "1w",
-                "type": "A"
-            },
-            "pve_s3_rachuna_dev": {
-                "name": "pve-s3.rachuna.dev",
-                "address": "10.3.0.13",
-                "comment": "pve-s3.rachuna.dev",
-                "ttl": "1w",
-                "type": "A"
-            },
-            "pve_s4_rachuna_dev": {
-                "name": "pve-s4.rachuna.dev",
-                "address": "10.3.0.14",
-                "comment": "pve-s4.rachuna.dev",
                 "ttl": "1w",
                 "type": "A"
             }
