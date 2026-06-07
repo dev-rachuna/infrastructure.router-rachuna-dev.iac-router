@@ -66,6 +66,26 @@
                 "ttl": "1w",
                 "type": "A"
             },
+            "gitlab_runner_1002_rachuna_dev": {
+                "name": "gitlab-runner-1002.rachuna.dev",
+                "address": "10.3.2.2",
+                "comment": "gitlab-runner-1002",
+                "type": "A"
+            },
+            "gitlab_runner_1003_rachuna_dev": {
+                "name": "gitlab-runner-1003.rachuna.dev",
+                "address": "10.3.2.3",
+                "comment": "gitlab-runner-1003",
+                "ttl": "1w",
+                "type": "A"
+            },
+            "gitlab_runner_1004_rachuna_dev": {
+                "name": "gitlab-runner-1004.rachuna.dev",
+                "address": "10.3.2.4",
+                "comment": "gitlab-runner-1004",
+                "ttl": "1w",
+                "type": "A"
+            },
             "vault_1005_rachuna_dev": {
                 "name": "vault-1005.rachuna.dev",
                 "address": "10.3.2.5",
@@ -87,23 +107,31 @@
                 "ttl": "1w",
                 "type": "A"
             },
-            "gitlab_runner_1002_rachuna_dev": {
-                "name": "gitlab-runner-1002.rachuna.dev",
-                "address": "10.3.2.2",
-                "comment": "gitlab-runner-1002",
-                "type": "A"
-            },
-            "gitlab_runner_1003_rachuna_dev": {
-                "name": "gitlab-runner-1003.rachuna.dev",
-                "address": "10.3.2.3",
-                "comment": "gitlab-runner-1003",
+            "postgresql_1008_rachuna_dev": {
+                "name": "postgresql-1008.rachuna.dev",
+                "address": "10.3.2.8",
+                "comment": "postgresql-1008",
                 "ttl": "1w",
                 "type": "A"
             },
-            "gitlab_runner_1004_rachuna_dev": {
-                "name": "gitlab-runner-1004.rachuna.dev",
-                "address": "10.3.2.4",
-                "comment": "gitlab-runner-1004",
+            "postgresql_1009_rachuna_dev": {
+                "name": "postgresql-1009.rachuna.dev",
+                "address": "10.3.2.9",
+                "comment": "postgresql-1009",
+                "ttl": "1w",
+                "type": "A"
+            },
+            "postgresql_1010_rachuna_dev": {
+                "name": "postgresql-1000.rachuna.dev",
+                "address": "10.3.2.10",
+                "comment": "vault-1010",
+                "ttl": "1w",
+                "type": "A"
+            },
+            "postgresql_rachuna_dev": {
+                "name": "postgresql.rachuna.dev",
+                "address": "10.3.2.253",
+                "comment": "vault VIP",
                 "ttl": "1w",
                 "type": "A"
             },

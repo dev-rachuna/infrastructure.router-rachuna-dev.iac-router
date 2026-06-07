@@ -1,6 +1,6 @@
 ![GitLab Stars](https://img.shields.io/gitlab/stars/dev.rachuna/infrastructure/router-rachuna-dev/iac-router)
 ![GitLab Forks](https://img.shields.io/gitlab/forks/dev.rachuna/infrastructure/router-rachuna-dev/iac-router)
-![Repository Type](https://img.shields.io/badge/Repository%20type-documentation-blue)
+![Repository Type](https://img.shields.io/badge/Repository%20type-Iac%20Opentofu-yellow)
 ![GitLab Release](https://img.shields.io/gitlab/v/release/dev.rachuna/infrastructure/router-rachuna-dev/iac-router)
 ![Gitlab Pipeline Status](https://img.shields.io/gitlab/pipeline-status/dev.rachuna/infrastructure/router-rachuna-dev/iac-router)
 ![GitLab Issues](https://img.shields.io/gitlab/issues/open/dev.rachuna/infrastructure/router-rachuna-dev/iac-router)

@@ -70,6 +70,21 @@
                   "address": "10.3.2.7",
                   "mac_address": "BC:24:11:B6:06:03",
                   "comment": "vault-1007.rachuna.dev"
+                },
+                "postgresql-1008_rachuna_dev": {
+                  "address": "10.3.2.8",
+                  "mac_address": "BC:24:11:B6:06:10",
+                  "comment": "postgresql-1008.rachuna.dev"
+                },
+                "postgresql-1009_rachuna_dev": {
+                  "address": "10.3.2.9",
+                  "mac_address": "BC:24:11:B6:06:11",
+                  "comment": "postgresql-1009.rachuna.dev"
+                },
+                "postgresql-1010_rachuna_dev": {
+                  "address": "10.3.2.10",
+                  "mac_address": "BC:24:11:B6:06:12",
+                  "comment": "postgresql-1010.rachuna.dev"
                 }
               }
             }
