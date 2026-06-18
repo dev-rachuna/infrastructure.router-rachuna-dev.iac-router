@@ -37,6 +37,10 @@
             "lan-04-30": {
               "interface": "LAN-04-30",
               "comment": "lan-04-30 Users VLAN"
+            },
+            "lan-05-30": {
+              "interface": "LAN-05-30",
+              "comment": "lan-05-30 Users VLAN"
             }
           },
           "bridge_vlans": {

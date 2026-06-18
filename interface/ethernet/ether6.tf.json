@@ -6,7 +6,7 @@
         "lan_05": {
           "factory_name": "ether6",
           "name": "LAN-05",
-          "comment": "printer.rachuna.dev",
+          "comment": "office.rachuna.dev",
           "poe_out": "off",
           "auto_negotiation": true
         }

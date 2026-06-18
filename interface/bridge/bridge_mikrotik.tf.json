@@ -16,6 +16,11 @@
               "interface": "LAN-04",
               "comment": "home.rachuna.dev",
               "trusted": true
+            },
+            "office_rachuna_dev": {
+              "interface": "LAN-05",
+              "comment": "office.rachuna.dev",
+              "trusted": true
             }
           },
           "ip_addresses": {

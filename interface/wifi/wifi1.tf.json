@@ -8,7 +8,7 @@
           "write"
         ],
         "launch_trigger": "wifi1-CH-5G-36-CFG-HERBAPOLKI-enabled",
-        "source": "/interface wifi set [ find default-name=wifi1 ] channel=CH-5G-36 configuration=CFG-HERBAPOLKI disabled=no"
+        "source": "/interface wifi set [ find default-name=wifi1 ] channel=CH-5G-36 configuration=CFG-HERBAPOLKI disabled=yes"
       }
     }
   }
