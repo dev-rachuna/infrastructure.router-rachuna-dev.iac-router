@@ -3,12 +3,19 @@
     "vlan-users": {
       "source": "git::https://gitlab.com/dev.rachuna/artifacts/opentofu/routeros-interfaces.git?ref=1.0.0",
       "vlan_interfaces": {
-        "vlan-users": {
+        "vlan-users-home": {
           "name": "LAN-04-30",
           "interface": "LAN-04",
           "vlan_id": 30,
           "loop_protect": "on",
           "comment": "LAN-04 VLAN Users"
+        },
+        "vlan-users-office": {
+          "name": "LAN-05-30",
+          "interface": "LAN-05",
+          "vlan_id": 30,
+          "loop_protect": "on",
+          "comment": "LAN-05 VLAN Users"
         }
       }
     }
